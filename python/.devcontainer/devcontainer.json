@@ -4,7 +4,11 @@
     "dockerfile": "Dockerfile",
     "context": "."
   },
-  "forwardPorts": [8888, 5000, 8000],
+  "forwardPorts": [
+    8888,
+    5000,
+    8000
+  ],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -18,6 +22,7 @@
   },
   "postCreateCommand": "python3 -c 'import sys, numpy, pandas; print(sys.version); print(numpy.__version__, pandas.__version__)'",
   "remoteUser": "vscode",
-  "updateRemoteUserUID": true
+  "updateRemoteUserUID": true,
+  "workspaceFolder": "/workspaces/python",
+  "initializeCommand": "/bin/sh -lc 'if command -v selinuxenabled >/dev/null 2>&1 && selinuxenabled; then chcon -Rt container_file_t \"${localWorkspaceFolder}\" || true; fi'"
 }
-

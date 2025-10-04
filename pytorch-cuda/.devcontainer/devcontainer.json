@@ -23,5 +23,7 @@
   "postCreateCommand": "python3 - <<'PY'\nimport torch, platform\nprint('torch', torch.__version__, 'cuda', torch.version.cuda, 'available', torch.cuda.is_available())\nPY",
   "remoteUser": "root",
   "updateRemoteUserUID": true
+  ,
+  "workspaceFolder": "/workspaces/pytorch-cuda",
+  "initializeCommand": "/bin/sh -lc 'if command -v selinuxenabled >/dev/null 2>&1 && selinuxenabled; then chcon -Rt container_file_t \"${localWorkspaceFolder}\" || true; fi'"
 }
-

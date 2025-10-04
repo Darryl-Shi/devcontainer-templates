@@ -1,6 +1,6 @@
 DevPod DevContainer Templates
 
-This repo provides ready‑to‑use devcontainer templates for your most-used stacks, designed to run with DevPod locally or on your Tailscale SSH provider (root@100.73.233.42). Pick a stack folder as your workspace root when running DevPod.
+This repo provides ready‑to‑use devcontainer templates for my most-used stacks. Pick a stack folder as your workspace root when running DevPod.
 
 Stacks
 - pytorch-cuda — CUDA-enabled PyTorch (GPU on remote). Includes numpy/pandas/scipy/matplotlib/jupyter + tooling.
@@ -33,4 +33,3 @@ Ports
 Tips
 - If you want per-project Python virtualenvs, keep them in the workspace (e.g. `.venv`) and set VS Code Python: `python.defaultInterpreterPath=.venv/bin/python`.
 - To reduce container bloat, the images install essential tooling and commonly used packages only. Adjust Dockerfiles as needed.
-
