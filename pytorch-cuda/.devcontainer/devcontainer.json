@@ -1,0 +1,27 @@
+{
+  "name": "pytorch-cuda",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "runArgs": ["--gpus=all", "--shm-size=1g"],
+  "containerEnv": {
+    "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"
+  },
+  "forwardPorts": [8888, 5000, 8000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "charliermarsh.ruff",
+        "ms-python.black-formatter"
+      ]
+    }
+  },
+  "postCreateCommand": "python3 - <<'PY'\nimport torch, platform\nprint('torch', torch.__version__, 'cuda', torch.version.cuda, 'available', torch.cuda.is_available())\nPY",
+  "remoteUser": "root",
+  "updateRemoteUserUID": true
+}
+

@@ -1,0 +1,20 @@
+{
+  "name": "cpp",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "twxs.cmake"
+      ]
+    }
+  },
+  "postCreateCommand": "cmake --version && clang --version",
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true
+}
+

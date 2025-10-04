@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+# Devcontainers / editors
+.devcontainer/scripts/*.log
+.DS_Store
+.vscode/
+.idea/
+

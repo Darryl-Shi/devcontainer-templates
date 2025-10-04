@@ -1,0 +1,19 @@
+{
+  "name": "rust",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "vadimcn.vscode-lldb"
+      ]
+    }
+  },
+  "postCreateCommand": "rustc --version && cargo --version && rustup show",
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true
+}
+
